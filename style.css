@@ -16,6 +16,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 50vw;
+    padding: 2rem 4rem;
 }
 
 .main-content h1 {
@@ -43,15 +44,6 @@ body{
     margin-top: 1rem;
 }
 
-.alternative span::before {
-    position: absolute;
-    content: '';
-    height: 1px;
-    width: 100px;
-    bottom: 50%;
-    right: 50px;
-    background: rgba(255, 255, 255, 0.3);
-}
 
 .main-content form {
     display: flex;
@@ -99,8 +91,8 @@ body{
 .images {
     width: 50vw;
     display: flex;
-    align-items: flex-end;
     justify-content: flex-end;
+    align-items: flex-end;
     padding: 4rem;
 }
 
@@ -117,4 +109,43 @@ body{
     background: linear-gradient(45deg, #E8CBC0, #636FA4);
     clip-path: circle(40% at right 80%);
     z-index: -1;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    .images {
+        width: 110%;
+    }
+
+    .images .circle {
+        clip-path: circle(35% at right 80%);
+    }
+}
+
+/*Esse media query funciona da seguinte forma: A partir do momento que a tela ter menos de 900px, irá acontecer o comando abaixo. Caso as dimensões sejam superiores
+a tela irá permanecer no layout normal.*/
+
+@media only screen and (max-width: 900px) {
+    .images {
+        display: none;
+        visibility: hidden;
+    }
+
+    .main-content {
+        width: 100vw;
+        box-sizing: content-box;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .main-content .alternative {
+        font-size: 0.8rem;
+    }
+
+    .main-content form span, .main-content form label, .main-content .button {
+        font-size: 1rem;
+    }
 }
