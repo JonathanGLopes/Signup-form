@@ -1,3 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 
+body{
+    background-color: #1B2029;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.main-content h1 {
+    color: #8880FE;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.main-content .social-media {
+    display: flex;
+    align-items: center;
+}
+
+.main-content .social-media img {
+    width: 2.188rem;
+    margin-left: 3rem;
+}
+
+.social-media a:first-child img {
+    margin-left: 0;
+}
+
+.alternative {
+    margin-top: 1rem;
+}
+
+.alternative span::before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.main-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content form label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.main-content form input {
+    background-color: #161923;;
+    width: 18.75rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 0 0.8rem;
+    color: white;
+    border: 1px solid #040B18;
+    margin-top: 1rem;
+}
+
+.main-content form span {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.main-content .button {
+    background: #6C63FF;
+    border-radius: 1.875rem;
+    width: 50%;
+    font-size: 1rem;
+    margin-top: 4rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.button:hover {
+    background: #5952d4;
+}
+
+.images {
+    width: 50vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 4rem;
+}
+
+.images img {
+    width: 70%;
+}
+
+.images .circle {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #E8CBC0, #636FA4);
+    clip-path: circle(40% at right 80%);
+    z-index: -1;
+}
