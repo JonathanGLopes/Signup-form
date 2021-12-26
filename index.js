@@ -22,6 +22,29 @@ function checkInputs () {
         errorValidation(username, "Preencha esse campo");
     } else {
         //adicionar a classe sucesso
+        successValidation(username)
+    }
+
+    if (emailValue == '') {
+        errorValidation(email, "Preencha esse campo");
+    } else {
+        successValidation(email);
+    }
+
+    if (passwordValue == '') {
+        errorValidation(password, "Insira a senha");
+    }else if (passwordValue.length < 8) {
+        errorValidation(password, "A senha deve ter + de 8 caracteres");
+    }else {
+        successValidation(password);
+    }
+
+    if(passwordtwoValue == '') {
+        errorValidation(passwordtwo, "Insira a senha");
+    }else if (passwordValue !== passwordtwoValue){
+        errorValidation(passwordtwo, "As senhas inseridas não são iguais");
+    }else {
+        successValidation(passwordtwo);
     }
 }
 
@@ -32,4 +55,10 @@ function errorValidation(input, message) {
     small.innerText = message;
 
     formControl.className = 'form-control error';
+}
+
+function successValidation(input) {
+    const formControl = input.parentElement;
+
+    formControl.className = 'form-control success'
 }
