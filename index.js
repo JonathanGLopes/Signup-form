@@ -34,7 +34,7 @@ function checkInputs () {
     if (passwordValue == '') {
         errorValidation(password, "Insira a senha");
     }else if (passwordValue.length < 8) {
-        errorValidation(password, "A senha deve ter + de 8 caracteres");
+        errorValidation(password, "A senha deve ter no mínimo 8 caracteres");
     }else {
         successValidation(password);
     }
